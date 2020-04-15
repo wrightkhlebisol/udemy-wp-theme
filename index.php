@@ -71,8 +71,8 @@
                 <!-- Pagination
             ============================================= -->
                 <ul class="pager nomargin">
-                    <li class="previous"><?php previous_post_link('&larr; Older'); ?></li>
-                    <li class="next"><?php next_post_link('Newer &rarr;'); ?></li>
+                    <li class="previous"><?php previous_posts_link('&larr; Older') ?></li>
+                    <li class="next"><?php next_posts_link('Newer &rarr;') ?></li>
                 </ul><!-- .pager end -->
 
             </div><!-- .postcontent end -->
