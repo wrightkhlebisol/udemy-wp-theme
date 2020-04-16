@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="panel-body">
                                         <div class="author-image">
-                                            <?php the_author_meta('image') ?>
+                                            <?php echo get_avatar($author_ID) ?>
                                             <img src="images/author/1.jpg" alt="" class="img-circle">
                                         </div>
                                         <?php the_author_description(); ?>
