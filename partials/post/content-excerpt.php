@@ -15,7 +15,7 @@
 
         <?php echo get_the_tag_list('<li><i class="icon-folder-open"></i>', ', ', '</li>') ?>
 
-        <li><a href="single.html#comments"><i class="icon-comments"></i> <?php comments_number(0, 1) ?> Comments</a></li>
+        <li><a href="single.html#comments"><i class="icon-comments"></i> <?php comments_number('0 Comments', '1 Comment') ?></a></li>
     </ul>
     <div class="entry-content">
         <?php the_excerpt(); ?>
