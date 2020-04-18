@@ -17,7 +17,7 @@ get_header();
     <div class="content-wrap">
         <div class="container clearfix">
             <?php
-            if (have_posts) {
+            if (have_posts()) {
                 while (have_posts()) {
                     the_post();
 
