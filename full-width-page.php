@@ -7,28 +7,8 @@
 
 get_header();
 
-while (have_posts()) {
-    the_post();
 ?>
-    <!-- Page Title
-============================================= -->
-    <section id="page-title">
 
-        <div class="container clearfix">
-            <h1><?php the_title(); ?></h1>
-            <?php
-            if (function_exists('the_subtitle')) { ?>
-                <span><?php the_subtitle(); ?></span>
-            <?php
-            }
-            ?>
-        </div>
-
-    </section><!-- #page-title end -->
-<?php
-}
-rewind_posts();
-?>
 
 <!-- Content
 ============================================= -->
@@ -36,18 +16,15 @@ rewind_posts();
 
     <div class="content-wrap">
         <div class="container clearfix">
-
-            <!-- Post Content
-        ============================================= -->
-            <div class="postcontent nobottommargin clearfix">
-                <?php
+            <?php
+            if (have_posts) {
                 while (have_posts()) {
                     the_post();
 
-                    $author_ID      =   get_the_author_ID();
-                    $author_url     =   get_the_author_url();
+                    $author_ID   =   get_the_author_ID();
+                    $author_url  =   get_the_author_url();
 
-                ?>
+            ?>
 
 
                     <!-- Single Post
@@ -90,13 +67,12 @@ rewind_posts();
                     }
                     ?>
 
-                <?php
+            <?php
                 }
-                ?>
+            }
+            ?>
 
-            </div><!-- .postcontent end -->
-
-        </div>
+        </div><!-- .postcontent end -->
 
     </div>
 
