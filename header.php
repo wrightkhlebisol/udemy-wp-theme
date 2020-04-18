@@ -88,7 +88,11 @@
                 </div><!-- #logo end -->
 
                 <div class="top-advert">
-                    <img src="images/magazine/ad.jpg" alt="Ad">
+                    <?php
+                    if (function_exists('quads_ad')) {
+                        echo quads_ad(['location' => 'udemy_header']);
+                    }
+                    ?>
                 </div>
 
             </div>
