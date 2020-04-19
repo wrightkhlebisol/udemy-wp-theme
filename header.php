@@ -73,7 +73,7 @@
                             <?php } ?>
                             <?php
                             if (get_theme_mod('wu_mail')) { ?>
-                                <li><a href="mailto:<?php echo get_theme_mod('wu_mail') ?>" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text"><?php echo get_theme_mod('wu_mail') ?></span></a></li>
+                                <li><a href="mailto:<?php echo get_theme_mod('wu_mail') ?>" class="si-email3"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text"><?php echo get_theme_mod('wu_mail_address') ?></span></a></li>
                             <?php } ?>
 
                         </ul>
@@ -176,9 +176,12 @@
                         <!-- Top Search
                     ============================================= -->
                         <div id="top-search">
-                            <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                            <form action="search.html" method="get">
-                                <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                            <a href="#" id="top-search-trigger">
+                                <i class="icon-search3"></i>
+                                <i class="icon-line-cross"></i>
+                            </a>
+                            <form action="<?php echo esc_url(home_url('/')); ?>" method="get">
+                                <input type="text" name="q" class="form-control" value="<?php the_search_query(); ?>" placeholder="<?php __('Type &amp; Hit Enter..', 'udemy') ?>">
                             </form>
                         </div><!-- #top-search end -->
 

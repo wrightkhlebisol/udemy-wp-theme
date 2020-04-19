@@ -2,6 +2,9 @@
 
 function wu_social_customizer_section($wp_customize)
 {
+
+    // Add fields to database
+
     $wp_customize->add_setting('wu_facebook_handle', [
         'default'       =>  ''
     ]);
@@ -22,10 +25,14 @@ function wu_social_customizer_section($wp_customize)
         'default'       =>  ''
     ]);
 
+    // Add section on the customizer
+
     $wp_customize->add_section('wu_social_section', [
         'title'     =>  __('Udemy Social Settings', 'udemy'),
         'priority'  =>  30
     ]);
+
+    // Add different fields inside the section on the customizer
 
     $wp_customize->add_control(
         new WP_Customize_Control($wp_customize, 'wu_social_facebook_input', [

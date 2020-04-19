@@ -6,8 +6,9 @@
 include_once(get_template_directory() . '/includes/front/enqueue.php');
 include_once(get_template_directory() . '/includes/setup.php');
 include_once(get_template_directory() . '/includes/widgets.php');
-include_once(get_template_directory() . '/includes/theme-customizer.php');
 include_once(get_template_directory() . '/includes/customizer/social.php');
+include_once(get_template_directory() . '/includes/customizer/misc.php');
+include_once(get_template_directory() . '/includes/theme-customizer.php');
 
 //  Hooks
 add_action('wp_enqueue_scripts', 'wu_enqueue');
