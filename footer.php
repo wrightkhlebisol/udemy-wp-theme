@@ -11,7 +11,18 @@
              <div class="col_half">
                  <?php echo get_theme_mod('wu_footer_copyright_text'); ?>
                  <br>
-                 <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+                 <div class="copyright-links">
+                     <?php
+                        if (get_theme_mod('wu_footer_tos_page')) { ?>
+                         <a href="<?php the_permalink(get_theme_mod('wu_footer_tos_page')) ?>">Terms of Use</a>
+                     <?php } ?>
+                     /
+                     <?php
+                        if (get_theme_mod('wu_footer_privacy_page')) { ?>
+                         <a href="<?php the_permalink(get_theme_mod('wu_footer_privacy_page')) ?>">Privacy Policy</a>
+                     <?php } ?>
+
+                 </div>
              </div>
 
              <div class="col_half col_last tright">
