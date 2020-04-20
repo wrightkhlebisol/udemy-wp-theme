@@ -12,7 +12,7 @@ function wu_misc_customizer_section($wp_customize)
     ]);
 
     $wp_customize->add_setting('wu_footer_copyright_text', [
-        'default'       =>  'Copyright $copy; ' . date('Y') . '. All Rights Reserved by Wrights Inc.'
+        'default'       =>  'Copyright &copy; ' . date('Y') . '. All Rights Reserved by Wrights Inc.'
     ]);
 
     $wp_customize->add_setting('wu_footer_tos_page', [
@@ -64,8 +64,7 @@ function wu_misc_customizer_section($wp_customize)
         [
             'label'         =>  __('Copyright Text', 'udemy'),
             'section'       =>  'wu_misc_section',
-            'settings'      =>  'wu_footer_copyright_text',
-            'type'          =>  'text'
+            'settings'      =>  'wu_footer_copyright_text'
         ]
     ));
 
@@ -73,13 +72,10 @@ function wu_misc_customizer_section($wp_customize)
         $wp_customize,
         'wu_footer_tos_page_section',
         [
-            'label'         =>  __('Show Terms of Use in footer', 'udemy'),
+            'label'         =>  __('Terms of Use Page', 'udemy'),
             'section'       =>  'wu_misc_section',
             'settings'      =>  'wu_footer_tos_page',
-            'type'          =>  'checkbox',
-            'choices'       =>  [
-                1       =>  __('Yes', 'udemy')
-            ]
+            'type'          =>  'dropdown-pages'
         ]
     ));
 
@@ -87,13 +83,10 @@ function wu_misc_customizer_section($wp_customize)
         $wp_customize,
         'wu_footer_privacy_page_section',
         [
-            'label'         =>  __('Show Privacy Page in footer', 'udemy'),
+            'label'         =>  __('Privacy Policy Page', 'udemy'),
             'section'       =>  'wu_misc_section',
             'settings'      =>  'wu_footer_privacy_page',
-            'type'          =>  'checkbox',
-            'choices'       =>  [
-                1       =>  __('Yes', 'udemy')
-            ]
+            'type'          =>  'dropdown-pages'
         ]
     ));
 }
