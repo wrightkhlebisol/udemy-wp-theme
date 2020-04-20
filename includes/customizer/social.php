@@ -29,7 +29,8 @@ function wu_social_customizer_section($wp_customize)
 
     $wp_customize->add_section('wu_social_section', [
         'title'     =>  __('Udemy Social Settings', 'udemy'),
-        'priority'  =>  30
+        'priority'  =>  30,
+        'panel'     =>  'udemy'
     ]);
 
     // Add different fields inside the section on the customizer

@@ -27,6 +27,7 @@ function wu_misc_customizer_section($wp_customize)
     $wp_customize->add_section('wu_misc_section', [
         'title'         =>  __('Udemy Misc Settings', 'udemy'),
         'priority'      =>  30,
+        'panel'         =>  'udemy'
     ]);
 
     // Add Fields(controls) to the customizer section in the theme
